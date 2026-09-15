@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html class="dark" data-theme="dark" lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Mateus Sena | Desenvolvedor Backend</title>
+
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+        id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-fixed": "#dce1ff", "primary-fixed-dim": "#b7c4ff", "on-error-container": "#ffdad6", "background": "#0b1326", "on-surface": "#dae2fd", "primary-container": "#1d4ed8", "on-tertiary-fixed-variant": "#38485d", "surface-container-low": "#131b2e", "on-surface-variant": "#c4c5d7", "on-secondary": "#002e6a", "surface": "#0b1326", "error": "#ffb4ab", "inverse-primary": "#2151da", "on-secondary-container": "#e6ecff", "on-primary-container": "#cad3ff", "tertiary-fixed-dim": "#b7c8e1", "outline": "#8e90a0", "on-tertiary-fixed": "#0b1c30", "surface-container": "#171f33", "on-tertiary-container": "#c5d6f0", "on-secondary-fixed": "#001a42", "on-background": "#dae2fd", "inverse-surface": "#dae2fd", "surface-variant": "#2d3449", "on-secondary-fixed-variant": "#004395", "secondary": "#adc6ff", "surface-bright": "#31394d", "secondary-fixed-dim": "#adc6ff", "surface-container-lowest": "#060e20", "on-primary-fixed-variant": "#0039b5", "secondary-fixed": "#d8e2ff", "on-tertiary": "#213145", "outline-variant": "#434655", "primary": "#b7c4ff", "tertiary": "#b7c8e1", "inverse-on-surface": "#283044", "on-primary": "#002682", "tertiary-fixed": "#d3e4fe", "error-container": "#93000a", "secondary-container": "#0566d9", "surface-container-high": "#222a3d", "surface-dim": "#0b1326", "on-error": "#690005", "tertiary-container": "#4d5d73", "on-primary-fixed": "#001551", "surface-container-highest": "#2d3449", "surface-tint": "#b7c4ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2.5rem", "space-md": "1rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "margin": "3rem", "gutter": "1.5rem", "gutter-mobile": "1rem", "space-lg": "1.5rem", "margin-mobile": "1.25rem" }, "fontFamily": { "label-sm": ["Manrope"], "headline-xl": ["Plus Jakarta Sans"], "body-sm": ["Manrope"], "headline-lg": ["Plus Jakarta Sans"], "display-hero-mobile": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "code-mono": ["monospace"], "body-md": ["Manrope"], "body-lg": ["Manrope"], "label-md": ["Manrope"] }, "fontSize": { "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "400" }], "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "headline-md": ["22px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "code-mono": ["13px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "500" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }] } } } };</script>
+</head>
+
+<body class="bg-surface text-on-surface font-body-md text-body-md antialiased transition-colors duration-200">
+    <header class="fixed top-0 left-0 right-0 z-50 bg-surface/85 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.2)]">
+        <div class="h-20 max-w-[1280px] mx-auto px-6 lg:px-12 flex items-center justify-between">
+            <div class="flex items-center gap-4"><a class="flex items-center gap-3 focus:outline-none"
+                    href="#inicio"><img alt="Logo Mateus Sena Dev" class="h-8 w-auto object-contain"
+                        src="https://lh3.googleusercontent.com/aida/AEtjO1Vz9F0lPQ_-Ttbr-ZYuUuf9Hu9Dw6HpX9p9yvuLnNj7HABoinS_dNRruMAmATimYZ3R48AkUhum4SOyKzY4ooABqK3irdrLOZ9oQhhiKoNyn2emiJbQWH2a9_0C7-lqZLxPdtnxIk4gY_ZRF5BWmTGW7Wtq4z73ISUm9E0PVonZ9b1qVZEjaimBla_EI_oagQ-tqr0EX4zCElE9oTIQBmbQDyXz1cVhfbkR-HnGu-jxT-GhqiX0jMZn">
+                    <div class="flex flex-col"><span class="text-on-surface tracking-tight leading-tight font-semibold"
+                            style="font-size: 0.9375rem;">Mateus Sena</span><span
+                            class="text-on-surface-variant font-code-mono text-[11px] leading-tight mt-0.5">Backend Dev
+                            &amp; Software
+                            Engineer</span></div>
+                </a></div>
+            <nav class="hidden lg:flex items-center gap-6" data-active-classes="text-primary font-bold"><a
+                    aria-current="page" class="transition-colors text-primary font-semibold"
+                    style="font-size: 0.9375rem;" data-path="portfolio" href="#inicio">Início</a><a
+                    class="transition-colors text-on-surface-variant hover:text-on-surface font-medium"
+                    style="font-size: 0.9375rem;" data-path="portfolio" href="#sobre">Sobre Mim</a><a
+                    class="transition-colors text-on-surface-variant hover:text-on-surface font-medium"
+                    style="font-size: 0.9375rem;" data-path="portfolio" href="#tecnologias">Tecnologias</a><a
+                    class="transition-colors text-on-surface-variant hover:text-on-surface font-medium"
+                    style="font-size: 0.9375rem;" data-path="portfolio" href="#projetos">Projetos</a><a
+                    class="transition-colors text-on-surface-variant hover:text-on-surface font-medium"
+                    style="font-size: 0.9375rem;" data-path="portfolio" href="#experiencia">Experiência</a><a
+                    class="transition-colors text-on-surface-variant hover:text-on-surface font-medium"
+                    style="font-size: 0.9375rem;" data-path="portfolio" href="#formacao">Formação</a><a
+                    class="transition-colors text-on-surface-variant hover:text-on-surface font-medium"
+                    style="font-size: 0.9375rem;" data-path="portfolio" href="#contato">Contato</a></nav>
+            <div class="flex items-center gap-3"><button aria-label="Alternar modo claro e escuro"
+                    class="p-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors flex items-center justify-center"
+                    id="theme-toggle" type="button"><span class="material-symbols-outlined text-[20px]"
+                        id="theme-icon-dark">light_mode</span><span class="material-symbols-outlined text-[20px] hidden"
+                        id="theme-icon-light">dark_mode</span></button><img alt="Profile"
+                    class="w-8 h-8 rounded-full object-cover shadow-[0_1px_8px_rgba(0,0,0,0.1)]"
+                    src="https://lh3.googleusercontent.com/aida/AEtjO1VW3VsmtUpshH-8aFL9uTaLuPjJlZhxReYTYRFx6gAsmc4onfmPlwvaiZPbV0x1FQ_rA3hlrT-JVkmOa9dLp9YQjePYhPBp6jgKEKYrsxdO8VthGW4WZpiXWrRzlNVWDpjV2U9dkSRTZxTK-zcyTGz4iDAaQguMeawWoBL5PdynrP15TVHSot03mrha3ILsF2lf2s3YOk6n1Gd_BbBhO7B1a6dGi19zmsNrrnGmaf5M3UWx_I4r5LwvMw"><button
+                    aria-expanded="false" aria-label="Abrir menu de navegação"
+                    class="lg:hidden p-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors flex items-center justify-center"
+                    id="mobile-menu-toggle" type="button"><span class="material-symbols-outlined text-[22px]"
+                        id="mobile-menu-icon">menu</span></button></div>
+        </div>
+        <div class="hidden lg:hidden bg-surface-container-low shadow-[0_8px_24px_-4px_rgba(0,0,0,0.4)] px-6 py-5"
+            id="mobile-drawer">
+            <nav class="flex flex-col gap-3"><a
+                    class="mobile-nav-link text-on-surface-variant hover:text-on-surface py-2 font-label-md text-label-md transition-colors"
+                    data-path="portfolio" href="#inicio">Início</a><a
+                    class="mobile-nav-link text-on-surface-variant hover:text-on-surface py-2 font-label-md text-label-md transition-colors"
+                    data-path="portfolio" href="#sobre">Sobre Mim</a><a
+                    class="mobile-nav-link text-on-surface-variant hover:text-on-surface py-2 font-label-md text-label-md transition-colors"
+                    data-path="portfolio" href="#tecnologias">Tecnologias</a><a
+                    class="mobile-nav-link text-on-surface-variant hover:text-on-surface py-2 font-label-md text-label-md transition-colors"
+                    data-path="portfolio" href="#projetos">Projetos</a><a
+                    class="mobile-nav-link text-on-surface-variant hover:text-on-surface py-2 font-label-md text-label-md transition-colors"
+                    data-path="portfolio" href="#experiencia">Experiência</a><a
+                    class="mobile-nav-link text-on-surface-variant hover:text-on-surface py-2 font-label-md text-label-md transition-colors"
+                    data-path="portfolio" href="#formacao">Formação</a><a
+                    class="mobile-nav-link text-on-surface-variant hover:text-on-surface py-2 font-label-md text-label-md transition-colors"
+                    data-path="portfolio" href="#contato">Contato</a></nav>
+        </div>
+    </header>
+    <main class="w-full pt-20 bg-surface min-h-screen">
+        <div class="flex flex-col w-full">
+            <!-- 1. HERO / INÍCIO -->
+            <section class="w-full max-w-[1280px] mx-auto px-6 lg:px-12 py-16 lg:py-24" id="inicio">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                    <!-- Coluna de Texto Principal -->
+                    <div class="lg:col-span-7 flex flex-col items-start gap-6">
+                        <!-- Eyebrow & Status Chip -->
+                        <div class="flex flex-wrap items-center gap-3">
+                            <span
+                                class="px-3 py-1 rounded-full bg-surface-container-high text-primary font-code-mono text-label-sm uppercase tracking-wider">
+                                Olá, eu sou
+                            </span>
+                            <div
+                                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+                                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                                <span class="">Disponível para Estágio e Trainee • Backend &amp; Dados</span>
+                            </div>
+                        </div>
+                        <!-- Heading e Subtítulo -->
+                        <div class="space-y-2">
+                            <h1 class="font-headline-md text-headline-md text-on-surface tracking-tight font-semibold"
+                                style="font-size: clamp(1.15rem, 1.5vw, 1.25rem); line-height: 1.4;">
+                                Mateus Sena
+                            </h1>
+                            <p class="font-headline-lg text-primary font-semibold"
+                                style="font-size: clamp(1.25rem, 2vw, 1.5rem); line-height: 1.35;">
+                                Desenvolvedor Backend | Estudante de Engenharia de Software
+                            </p>
+                        </div>
+                        <!-- Descrição -->
+                        <p class="font-body-md text-on-surface-variant max-w-xl leading-relaxed"
+                            style="font-size: 1rem; line-height: 1.7;">
+                            Estudante de Engenharia de Software e Técnico em Desenvolvimento de Sistemas, com foco em
+                            desenvolvimento
+                            backend, APIs REST e dados. Comprometido com arquiteturas resilientes e código limpo.
+                        </p>
+                        <!-- CTA Triggers -->
+                        <div class="flex flex-wrap items-center gap-4 pt-2"><a
+                                class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-primary-container text-white font-medium hover:bg-secondary-container transition-all duration-200 shadow-md hover:shadow-lg"
+                                style="font-size: 0.96875rem;" href="#projetos">
+                                <span class="">Ver projetos</span>
+                                <svg aria-hidden="true" class="w-4 h-4" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path d="M19 14l-7 7m0 0l-7-7m7 7V3" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-medium transition-all duration-200 shadow-sm"
+                                style="font-size: 0.96875rem;" href="#contato">
+                                <span class="">Entre em contato</span>
+                                <svg aria-hidden="true" class="w-4 h-4 text-on-surface-variant" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                        <!-- Telemetria Rápida de Métricas -->
+                        <div
+                            class="w-full grid grid-cols-3 gap-4 pt-6 mt-4 border-t-0 bg-surface-container-lowest/60 p-4 rounded-xl">
+                            <div>
+                                <span class="block font-code-mono text-on-surface-variant"
+                                    style="font-size: 0.78125rem;">LOCALIDADE</span>
+                                <span class="block text-on-surface font-semibold mt-0.5"
+                                    style="font-size: 0.96875rem;">Lauro de
+                                    Freitas</span>
+                                <span class="block text-on-surface-variant mt-0.5" style="font-size: 0.875rem;">Bahia,
+                                    Brasil</span>
+                            </div>
+                            <div>
+                                <span class="block font-code-mono text-on-surface-variant"
+                                    style="font-size: 0.78125rem;">STACK
+                                    PRINCIPAL</span>
+                                <span class="block text-primary font-semibold mt-0.5"
+                                    style="font-size: 0.96875rem;">Java &amp;
+                                    Spring</span>
+                                <span class="block text-on-surface-variant mt-0.5" style="font-size: 0.875rem;">Node.js
+                                    &amp; SQL</span>
+                            </div>
+                            <div>
+                                <span class="block font-code-mono text-on-surface-variant"
+                                    style="font-size: 0.78125rem;">STATUS
+                                    ATUAL</span>
+                                <span class="block text-emerald-400 font-semibold mt-0.5"
+                                    style="font-size: 0.96875rem;">Em
+                                    Formação</span>
+                                <span class="block text-on-surface-variant mt-0.5" style="font-size: 0.875rem;">3º
+                                    Semestre</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Coluna do Avatar / Representação Técnica -->
+                    <div class="lg:col-span-5 flex justify-center lg:justify-end">
+                        <div class="relative group">
+                            <!-- Brilho de Fundo Decorativo -->
+                            <div
+                                class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-primary-container/30 to-secondary/20 blur-xl opacity-75 group-hover:opacity-100 transition duration-500">
+                            </div>
+                            <!-- Card Container do Avatar -->
+                            <div
+                                class="relative bg-surface-container p-6 rounded-2xl shadow-xl flex flex-col items-center">
+                                <!-- Imagem do Avatar Tecnológico Mateus Sena -->
+                                <div
+                                    class="w-64 h-64 sm:w-72 sm:h-72 rounded-xl overflow-hidden bg-surface-container-lowest flex items-center justify-center relative">
+                                    <img alt="Avatar Perfil Desenvolvedor Mateus Sena"
+                                        class="w-full h-full object-cover"
+                                        src="https://lh3.googleusercontent.com/aida/AEtjO1VW3VsmtUpshH-8aFL9uTaLuPjJlZhxReYTYRFx6gAsmc4onfmPlwvaiZPbV0x1FQ_rA3hlrT-JVkmOa9dLp9YQjePYhPBp6jgKEKYrsxdO8VthGW4WZpiXWrRzlNVWDpjV2U9dkSRTZxTK-zcyTGz4iDAaQguMeawWoBL5PdynrP15TVHSot03mrha3ILsF2lf2s3YOk6n1Gd_BbBhO7B1a6dGi19zmsNrrnGmaf5M3UWx_I4r5LwvMw">
+                                </div>
+                                <!-- Terminal Mockup de Status -->
+                                <div
+                                    class="w-full mt-4 bg-surface-container-lowest p-3 rounded-lg font-code-mono text-[12px] text-on-surface-variant space-y-1">
+                                    <div class="flex items-center gap-1.5 pb-1">
+                                        <span class="w-2.5 h-2.5 rounded-full bg-red-500/80 inline-block"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-amber-500/80 inline-block"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/80 inline-block"></span>
+                                        <span class="ml-2 text-on-surface-variant/70 text-[11px]">dev-environment ~
+                                            v17.0</span>
+                                    </div>
+                                    <p class="text-secondary">$ systemctl status backend-profile</p>
+                                    <p class="text-emerald-400">● active (running) - APIs &amp; Relational DBs</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 2. SOBRE MIM -->
+            <section class="w-full bg-surface-container-low py-20" id="sobre">
+                <div class="max-w-[1280px] mx-auto px-6 lg:px-12 flex flex-col gap-12">
+                    <!-- Section Header -->
+                    <div class="flex flex-col gap-2">
+                        <div class="flex items-center gap-3">
+                            <span
+                                class="px-2.5 py-0.5 rounded bg-surface-container text-primary font-code-mono text-label-sm uppercase">01
+                                // Contexto</span>
+                            <span class="h-[1px] w-12 bg-primary/40"></span>
+                        </div>
+                        <h2 class="text-on-surface font-bold"
+                            style="font-size: clamp(1.5rem, 2.5vw, 1.75rem); line-height: 1.25;">
+                            Sobre Mim</h2>
+                    </div>
+                    <!-- Bio e Cards em Grid Proporcional -->
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                        <!-- Bio Descritiva -->
+                        <div class="lg:col-span-7 bg-surface-container p-8 rounded-xl shadow-sm flex flex-col gap-5">
+                            <p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+                                Estudante de Engenharia de Software e Técnico em Desenvolvimento de Sistemas, com foco
+                                em
+                                desenvolvimento de software e interesse contínuo no ecossistema backend.
+                            </p>
+                            <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                                Tenho experiência prática no desenvolvimento de APIs REST utilizando Java e Spring Boot,
+                                aplicando
+                                conceitos sólidos de orientação a objetos, persistência de dados, validações e regras de
+                                negócio. No
+                                desenvolvimento de projetos, busco estruturar aplicações de forma organizada e
+                                sustentável, utilizando
+                                arquitetura em camadas, separação de responsabilidades e boas práticas de engenharia de
+                                software.
+                            </p>
+                            <div class="p-4 rounded-lg bg-surface-container-lowest flex items-start gap-4">
+                                <svg aria-hidden="true" class="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                                </svg>
+                                <div>
+                                    <span
+                                        class="block font-headline-sm text-headline-sm text-on-surface font-semibold">Princípios
+                                        de
+                                        Projeto</span>
+                                    <p class="font-body-sm text-body-sm text-on-surface-variant">Código limpo,
+                                        arquitetura em camadas
+                                        (Controller-Service-Repository), tipagem segura e consistência de dados
+                                        relacionais.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 4 Quick Information Cards (Proximidade & Repetição de Robin Williams) -->
+                        <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <!-- Card 1 -->
+                            <div
+                                class="bg-surface-container p-5 rounded-xl shadow-sm flex flex-col gap-2 hover:bg-surface-container-high transition-colors">
+                                <span class="font-code-mono text-label-sm text-primary">GRADUAÇÃO</span>
+                                <span class="font-headline-sm text-headline-sm text-on-surface">Engenharia de
+                                    Software</span>
+                                <span class="font-body-sm text-body-sm text-on-surface-variant">3º semestre
+                                    cursando</span>
+                            </div>
+                            <!-- Card 2 -->
+                            <div
+                                class="bg-surface-container p-5 rounded-xl shadow-sm flex flex-col gap-2 hover:bg-surface-container-high transition-colors">
+                                <span class="font-code-mono text-label-sm text-primary">FORMAÇÃO TÉCNICA</span>
+                                <span class="font-headline-sm text-headline-sm text-on-surface">Desenv. de
+                                    Sistemas</span>
+                                <span class="font-body-sm text-body-sm text-on-surface-variant">SENAI • 3º
+                                    semestre</span>
+                            </div>
+                            <!-- Card 3 -->
+                            <div
+                                class="bg-surface-container p-5 rounded-xl shadow-sm flex flex-col gap-2 hover:bg-surface-container-high transition-colors">
+                                <span class="font-code-mono text-label-sm text-primary">ESPECIALIZAÇÃO</span>
+                                <span class="font-headline-sm text-headline-sm text-on-surface">Foco Técnico</span>
+                                <span class="font-body-sm text-body-sm text-on-surface-variant">Backend &amp; Estruturas
+                                    de Dados</span>
+                            </div>
+                            <!-- Card 4 -->
+                            <div
+                                class="bg-surface-container p-5 rounded-xl shadow-sm flex flex-col gap-2 hover:bg-surface-container-high transition-colors">
+                                <span class="font-code-mono text-label-sm text-primary">BASE GEOGRÁFICA</span>
+                                <span class="font-headline-sm text-headline-sm text-on-surface">Localização</span>
+                                <span class="font-body-sm text-body-sm text-on-surface-variant">Lauro de Freitas -
+                                    BA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 3. TECNOLOGIAS -->
+            <section class="w-full max-w-[1280px] mx-auto px-6 lg:px-12 py-20 flex flex-col gap-12" id="tecnologias">
+                <!-- Header -->
+                <div class="flex flex-col gap-2">
+                    <div class="flex items-center gap-3">
+                        <span
+                            class="px-2.5 py-0.5 rounded bg-surface-container text-primary font-code-mono text-label-sm uppercase">02
+                            // Stack</span>
+                        <span class="h-[1px] w-12 bg-primary/40"></span>
+                    </div>
+                    <h2 class="text-on-surface font-bold"
+                        style="font-size: clamp(1.5rem, 2.5vw, 1.75rem); line-height: 1.25;">
+                        Tecnologias &amp; Habilidades</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+                        Ferramentas, linguagens e frameworks aplicados no desenvolvimento de microsserviços, APIs
+                        corporativas e
+                        manipulação segura de bancos de dados.
+                    </p>
+                </div>
+                <!-- Grupos de Tecnologias -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- LINGUAGENS -->
+                    <div class="bg-surface-container p-6 rounded-xl shadow-sm flex flex-col gap-4">
+                        <div class="flex items-center justify-between">
+                            <span
+                                class="font-code-mono text-label-sm text-primary font-bold tracking-wider">LINGUAGENS</span>
+                            <span
+                                class="px-2 py-0.5 rounded bg-surface-container-high font-code-mono text-[11px] text-on-surface-variant">Core</span>
+                        </div>
+                        <div class="grid grid-cols-1 gap-3">
+                            <div
+                                class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors">
+                                <svg aria-hidden="true" class="w-5 h-5 text-secondary flex-shrink-0" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M7.784 14.776s-.84 1.134.42 1.344c1.89.315 3.36-.63 3.36-.63s-.945 1.575.42 1.785c1.89.21 3.885-.84 3.885-.84s-.84 1.26.42 1.47c1.785.315 4.305-.735 4.305-.735-3.36 2.52-12.81 2.205-12.81-2.394zm1.47-5.04s-2.94 2.205 1.47 2.415c4.725.21 6.825-1.575 6.825-1.575s-2.1 1.05-3.465 1.155c-2.31.105-4.83-.945-4.83-1.995zm1.575-4.83s-4.62 3.15 1.89 3.465c4.935.21 8.82-2.31 8.82-2.31s-3.57 1.47-5.775 1.575c-3.15.105-4.935-1.68-4.935-2.73z">
+                                    </path>
+                                </svg>
+                                <div>
+                                    <span
+                                        class="font-label-md text-label-md text-on-surface font-semibold block">Java</span>
+                                    <span class="font-body-sm text-[12px] text-on-surface-variant">POO, Streams &amp;
+                                        Concorrência</span>
+                                </div>
+                            </div>
+                            <div
+                                class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors">
+                                <svg aria-hidden="true" class="w-5 h-5 text-secondary flex-shrink-0" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M3 3h18v18H3V3zm15.5 13.5v-3.5h-2v3.5h2zm-4.5 0v-6h-2v6h2zm-4.5 0v-2h-2v2h2z">
+                                    </path>
+                                </svg>
+                                <div>
+                                    <span
+                                        class="font-label-md text-label-md text-on-surface font-semibold block">JavaScript</span>
+                                    <span class="font-body-sm text-[12px] text-on-surface-variant">ES6+, Assincronismo
+                                        &amp;
+                                        Promises</span>
+                                </div>
+                            </div>
+                            <div
+                                class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors">
+                                <svg aria-hidden="true" class="w-5 h-5 text-secondary flex-shrink-0" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.5h-2v-2h2v2zm0-4.5h-2V7h2v5z">
+                                    </path>
+                                </svg>
+                                <div>
+                                    <span
+                                        class="font-label-md text-label-md text-on-surface font-semibold block">Python</span>
+                                    <span class="font-body-sm text-[12px] text-on-surface-variant">Scripts &amp;
+                                        Automação de Dados</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- BACKEND -->
+                    <div class="bg-surface-container p-6 rounded-xl shadow-sm flex flex-col gap-4">
+                        <div class="flex items-center justify-between">
+                            <span class="font-code-mono text-label-sm text-primary font-bold tracking-wider">BACKEND
+                                &amp;
+                                SERVIÇOS</span>
+                            <span
+                                class="px-2 py-0.5 rounded bg-surface-container-high font-code-mono text-[11px] text-on-surface-variant">Arquitetura</span>
+                        </div>
+                        <div class="grid grid-cols-1 gap-3">
+                            <div
+                                class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors">
+                                <svg aria-hidden="true" class="w-5 h-5 text-emerald-400 flex-shrink-0"
+                                    fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2L2 7l10 5 10-5-10-5zm0 9l-8-4 8-4 8 4-8 4zm-8 4l8 4 8-4v3l-8 4-8-4v-3z">
+                                    </path>
+                                </svg>
+                                <div>
+                                    <span class="font-label-md text-label-md text-on-surface font-semibold block">Spring
+                                        Boot</span>
+                                    <span class="font-body-sm text-[12px] text-on-surface-variant">Security, JPA &amp;
+                                        Injeção de
+                                        Dependência</span>
+                                </div>
+                            </div>
+                            <div
+                                class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors">
+                                <svg aria-hidden="true" class="w-5 h-5 text-emerald-400 flex-shrink-0"
+                                    fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2L3 7v10l9 5 9-5V7l-9-5zm0 2.2l7 3.9v8.8l-7 3.9-7-3.9V8.1l7-3.9z">
+                                    </path>
+                                </svg>
+                                <div>
+                                    <span
+                                        class="font-label-md text-label-md text-on-surface font-semibold block">Node.js
+                                        &amp; Express /
+                                        Fastify</span>
+                                    <span class="font-body-sm text-[12px] text-on-surface-variant">Event-loop, I/O não
+                                        bloqueante</span>
+                                </div>
+                            </div>
+                            <div
+                                class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors">
+                                <svg aria-hidden="true" class="w-5 h-5 text-emerald-400 flex-shrink-0"
+                                    fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z"></path>
+                                </svg>
+                                <div>
+                                    <span class="font-label-md text-label-md text-on-surface font-semibold block">APIs
+                                        RESTful</span>
+                                    <span class="font-body-sm text-[12px] text-on-surface-variant">Padrões HTTP, DTOs
+                                        &amp;
+                                        Middlewares</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- BANCO DE DADOS -->
+                    <div class="bg-surface-container p-6 rounded-xl shadow-sm flex flex-col gap-4">
+                        <div class="flex items-center justify-between">
+                            <span class="font-code-mono text-label-sm text-primary font-bold tracking-wider">BANCO DE
+                                DADOS</span>
+                            <span
+                                class="px-2 py-0.5 rounded bg-surface-container-high font-code-mono text-[11px] text-on-surface-variant">Persistência</span>
+                        </div>
+                        <div class="grid grid-cols-1 gap-3">
+                            <div
+                                class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors">
+                                <svg aria-hidden="true" class="w-5 h-5 text-secondary flex-shrink-0" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 3c-4.97 0-9 1.79-9 4s4.03 4 9 4 9-1.79 9-4-4.03-4-9-4zm0 6c-3.87 0-7-1.12-7-2.5S8.13 4 12 4s7 1.12 7 2.5S15.87 9 12 9zm7 3.5c0 1.38-3.13 2.5-7 2.5s-7-1.12-7-2.5V9.8c1.8 1.35 4.3 2.2 7 2.2s5.2-.85 7-2.2v2.7zm0 5c0 1.38-3.13 2.5-7 2.5s-7-1.12-7-2.5v-2.7c1.8 1.35 4.3 2.2 7 2.2s5.2-.85 7-2.2v2.7z">
+                                    </path>
+                                </svg>
+                                <div>
+                                    <span
+                                        class="font-label-md text-label-md text-on-surface font-semibold block">PostgreSQL</span>
+                                    <span class="font-body-sm text-[12px] text-on-surface-variant">Modelagem Relacional
+                                        &amp;
+                                        Queries</span>
+                                </div>
+                            </div>
+                            <div
+                                class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors">
+                                <svg aria-hidden="true" class="w-5 h-5 text-secondary flex-shrink-0" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14h-2v-4h2v4zm4 0h-2v-7h2v7z">
+                                    </path>
+                                </svg>
+                                <div>
+                                    <span
+                                        class="font-label-md text-label-md text-on-surface font-semibold block">MongoDB</span>
+                                    <span class="font-body-sm text-[12px] text-on-surface-variant">NoSQL Documental
+                                        &amp; Schemas</span>
+                                </div>
+                            </div>
+                            <div
+                                class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors">
+                                <svg aria-hidden="true" class="w-5 h-5 text-secondary flex-shrink-0" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M3 5v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2zm16 14H5V5h14v14z">
+                                    </path>
+                                </svg>
+                                <div>
+                                    <span class="font-label-md text-label-md text-on-surface font-semibold block">SQL
+                                        Estruturado</span>
+                                    <span class="font-body-sm text-[12px] text-on-surface-variant">Joins, Índices &amp;
+                                        Transações
+                                        ACID</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FRONTEND (Complementar) -->
+                    <div class="bg-surface-container p-6 rounded-xl shadow-sm flex flex-col gap-4">
+                        <div class="flex items-center justify-between">
+                            <span class="font-code-mono text-label-sm text-primary font-bold tracking-wider">FRONTEND
+                                COMPLEMENTAR</span>
+                            <span
+                                class="px-2 py-0.5 rounded bg-surface-container-high font-code-mono text-[11px] text-on-surface-variant">Integração</span>
+                        </div>
+                        <div class="grid grid-cols-1 gap-3">
+                            <div
+                                class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors">
+                                <svg aria-hidden="true" class="w-5 h-5 text-secondary flex-shrink-0" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path d="M12 2L2 7v10l10 5 10-5V7l-10-5zm0 2.2l7 3.9-7 3.9-7-3.9 7-3.9z"></path>
+                                </svg>
+                                <div>
+                                    <span
+                                        class="font-label-md text-label-md text-on-surface font-semibold block">React</span>
+                                    <span class="font-body-sm text-[12px] text-on-surface-variant">Consumo de APIs,
+                                        Hooks e
+                                        Componentização</span>
+                                </div>
+                            </div>
+                            <div
+                                class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors">
+                                <svg aria-hidden="true" class="w-5 h-5 text-secondary flex-shrink-0" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path d="M4 3h16l-1.5 15.5L12 21l-6.5-2.5L4 3z"></path>
+                                </svg>
+                                <div>
+                                    <span class="font-label-md text-label-md text-on-surface font-semibold block">HTML5
+                                        &amp; CSS3</span>
+                                    <span class="font-body-sm text-[12px] text-on-surface-variant">Design Semântico,
+                                        Responsividade &amp;
+                                        Flexbox</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FERRAMENTAS & DEVOPS BÁSICO -->
+                    <div
+                        class="bg-surface-container p-6 rounded-xl shadow-sm flex flex-col gap-4 md:col-span-2 lg:col-span-2">
+                        <div class="flex items-center justify-between">
+                            <span class="font-code-mono text-label-sm text-primary font-bold tracking-wider">FERRAMENTAS
+                                &amp;
+                                ENGENHARIA</span>
+                            <span
+                                class="px-2 py-0.5 rounded bg-surface-container-high font-code-mono text-[11px] text-on-surface-variant">Workflow</span>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                            <div
+                                class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors">
+                                <svg aria-hidden="true" class="w-5 h-5 text-secondary flex-shrink-0" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z">
+                                    </path>
+                                </svg>
+                                <div>
+                                    <span class="font-label-md text-label-md text-on-surface font-semibold block">Git
+                                        &amp; GitHub</span>
+                                    <span class="font-body-sm text-[12px] text-on-surface-variant">Versionamento &amp;
+                                        Gitflow</span>
+                                </div>
+                            </div>
+                            <div
+                                class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors">
+                                <svg aria-hidden="true" class="w-5 h-5 text-secondary flex-shrink-0" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z">
+                                    </path>
+                                </svg>
+                                <div>
+                                    <span class="font-label-md text-label-md text-on-surface font-semibold block">Apache
+                                        Maven</span>
+                                    <span class="font-body-sm text-[12px] text-on-surface-variant">Gerenciamento de
+                                        Build Java</span>
+                                </div>
+                            </div>
+                            <div
+                                class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors">
+                                <svg aria-hidden="true" class="w-5 h-5 text-secondary flex-shrink-0" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z">
+                                    </path>
+                                </svg>
+                                <div>
+                                    <span
+                                        class="font-label-md text-label-md text-on-surface font-semibold block">Postman
+                                        /
+                                        Insomnia</span>
+                                    <span class="font-body-sm text-[12px] text-on-surface-variant">Testes e Validação de
+                                        Endpoints</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 4. PROJETOS -->
+            <section class="w-full bg-surface-container-low py-20" id="projetos">
+                <div class="max-w-[1280px] mx-auto px-6 lg:px-12 flex flex-col gap-10">
+                    <!-- Section Header -->
+                    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+                        <div class="flex flex-col gap-2">
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="px-2.5 py-0.5 rounded bg-surface-container text-primary font-code-mono text-label-sm uppercase">03
+                                    // Portfólio</span>
+                                <span class="h-[1px] w-12 bg-primary/40"></span>
+                            </div>
+                            <h2 class="text-on-surface font-bold"
+                                style="font-size: clamp(1.5rem, 2.5vw, 1.75rem); line-height: 1.25;">Projetos em
+                                Destaque</h2>
+                            <p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+                                Soluções de software desenvolvidas com foco em robustez estrutural, integração contínua
+                                e padrões
+                                arquiteturais de backend.
+                            </p>
+                        </div>
+                        <!-- Filtros Dinâmicos -->
+                        <div class="flex flex-wrap items-center gap-2 p-1.5 rounded-lg bg-surface-container">
+                            <button
+                                class="filter-btn active px-3.5 py-1.5 rounded text-label-sm font-label-md transition-all bg-primary-container text-white"
+                                data-filter="all" type="button">
+                                Todos
+                            </button>
+                            <button
+                                class="filter-btn px-3.5 py-1.5 rounded text-label-sm font-label-md transition-all text-on-surface-variant hover:text-on-surface"
+                                data-filter="java" type="button">
+                                Java / Spring Boot
+                            </button>
+                            <button
+                                class="filter-btn px-3.5 py-1.5 rounded text-label-sm font-label-md transition-all text-on-surface-variant hover:text-on-surface"
+                                data-filter="node" type="button">
+                                Node.js / Express
+                            </button>
+                            <button
+                                class="filter-btn px-3.5 py-1.5 rounded text-label-sm font-label-md transition-all text-on-surface-variant hover:text-on-surface"
+                                data-filter="frontend" type="button">
+                                SENAI / HTML &amp; CSS
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Grid dos Projetos -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+                        <!-- PROJETO 1: UNIBUS -->
+                        <div class="project-card bg-surface-container rounded-xl shadow-sm p-6 flex flex-col justify-between hover:bg-surface-container-high transition-all duration-200"
+                            data-category="node">
+                            <div class="flex flex-col gap-4">
+                                <div class="flex items-center justify-between">
+                                    <span class="font-code-mono text-label-sm text-secondary">MOBILIDADE
+                                        ACADÊMICA</span>
+                                    <span
+                                        class="px-2 py-0.5 rounded bg-surface-container-lowest font-code-mono text-[11px] text-on-surface-variant">Node.js
+                                        / Express</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-headline-md text-headline-md text-on-surface font-bold">UNIBUS</h3>
+                                    <p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed">
+                                        Sistema voltado à mobilidade acadêmica, desenvolvido como projeto para auxiliar
+                                        estudantes no
+                                        acompanhamento e organização das rotas de transporte universitário.
+                                    </p>
+                                </div>
+                                <!-- Tech Badges -->
+                                <div class="flex flex-wrap gap-1.5 pt-2">
+                                    <span
+                                        class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface-variant font-code-mono text-[11px]">JavaScript</span>
+                                    <span
+                                        class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface-variant font-code-mono text-[11px]">Node.js</span>
+                                    <span
+                                        class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface-variant font-code-mono text-[11px]">Express</span>
+                                    <span
+                                        class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface-variant font-code-mono text-[11px]">PostgreSQL</span>
+                                    <span
+                                        class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface-variant font-code-mono text-[11px]">APIs
+                                        REST</span>
+                                </div>
+                            </div>
+                            <!-- Ações -->
+                            <div class="flex items-center justify-between gap-3 pt-6 mt-6 border-t-0">
+                                <a class="text-primary hover:text-primary-fixed-dim font-label-md text-label-md flex items-center gap-1"
+                                    href="https://unibus-ucsal.vercel.app/" rel="noopener noreferrer"
+                                    target="_blank">Ver Projeto
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                                            stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                                    </svg></a>
+
+                            </div>
+                        </div>
+                        <!-- PROJETO 2: SISTEMA DE CONTROLE DE CHAMADOS (DESTAQUE BACKEND) -->
+                        <div class="project-card relative bg-surface-container rounded-xl shadow-lg p-6 flex flex-col justify-between hover:bg-surface-container-high transition-all duration-200"
+                            data-category="java">
+                            <!-- Destaque Badge Superior -->
+                            <div
+                                class="absolute -top-3 left-6 px-3 py-0.5 rounded-full bg-primary-container text-white font-code-mono text-[11px] font-bold shadow-md">
+                                ★ PROJETO PRINCIPAL DE BACKEND
+                            </div>
+                            <div class="flex flex-col gap-4 mt-2">
+                                <div class="flex items-center justify-between">
+                                    <span class="font-code-mono text-label-sm text-primary">API REST / ENTERPRISE</span>
+                                    <span
+                                        class="px-2 py-0.5 rounded bg-surface-container-lowest font-code-mono text-[11px] text-on-surface-variant">Spring
+                                        Boot 3</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-headline-md text-headline-md text-on-surface font-bold">Sistema de
+                                        Controle de
+                                        Chamados</h3>
+                                    <p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed">
+                                        API REST desenvolvida para gerenciamento de chamados técnicos, com autenticação
+                                        e autorização,
+                                        operações CRUD completas, relacionamento entre entidades, validações, regras de
+                                        negócio, tratamento
+                                        de exceções customizadas e integração com banco de dados PostgreSQL.
+                                    </p>
+                                </div>
+                                <!-- Tech Badges -->
+                                <div class="flex flex-wrap gap-1.5 pt-2">
+                                    <span
+                                        class="px-2 py-1 rounded bg-surface-container-lowest text-primary font-code-mono text-[11px] font-semibold">Java
+                                        17</span>
+                                    <span
+                                        class="px-2 py-1 rounded bg-surface-container-lowest text-primary font-code-mono text-[11px] font-semibold">Spring
+                                        Boot</span>
+                                    <span
+                                        class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface-variant font-code-mono text-[11px]">PostgreSQL</span>
+                                    <span
+                                        class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface-variant font-code-mono text-[11px]">Spring
+                                        Data JPA</span>
+                                    <span
+                                        class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface-variant font-code-mono text-[11px]">JWT
+                                        Auth</span>
+                                </div>
+                            </div>
+                            <!-- Ações -->
+                            <div
+                                class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 pt-6 mt-6 border-t-0">
+                                <button
+                                    class="open-modal-btn text-primary hover:text-primary-fixed-dim font-label-md text-label-md flex items-center gap-1"
+                                    data-project="chamados" type="button">
+                                    Ver Detalhes
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2"></path>
+                                    </svg>
+                                </button>
+                                <a class="px-4 py-2 rounded bg-primary-container text-white hover:bg-secondary-container font-label-sm text-label-sm flex items-center justify-center gap-2 shadow-sm transition-colors"
+                                    href="https://github.com/Sennaxz7/projeto-final-unidade-controle-chamados"
+                                    rel="noopener noreferrer" target="_blank">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z">
+                                        </path>
+                                    </svg>
+                                    Código no GitHub
+                                </a>
+                            </div>
+                        </div>
+                        <!-- PROJETO 3: TCC / SISTEMA DE ENTREGAS -->
+                        <div class="project-card bg-surface-container rounded-xl shadow-sm p-6 flex flex-col justify-between hover:bg-surface-container-high transition-all duration-200"
+                            data-category="frontend">
+                            <div class="flex flex-col gap-4">
+                                <div class="flex items-center justify-between">
+                                    <span class="font-code-mono text-label-sm text-secondary">ATIVIDADE PRÁTICA
+                                        SENAI</span>
+                                    <span
+                                        class="px-2 py-0.5 rounded bg-surface-container-lowest font-code-mono text-[11px] text-on-surface-variant">HTML
+                                        &amp; CSS</span>
+                                </div>
+                                <div>
+                                    <h3
+                                        class="font-headline-md text-headline-md text-on-surface font-bold leading-tight">
+                                        Grão &amp; Aroma
+                                    </h3>
+                                    <p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed">
+                                        Landing page desenvolvida como atividade prática do SENAI para uma cafeteria
+                                        fictícia. O projeto foi
+                                        desenvolvido utilizando HTML e CSS, com foco na construção de uma interface
+                                        moderna, organizada e
+                                        responsiva, adaptada para diferentes tamanhos de tela.
+                                    </p>
+                                </div>
+                                <!-- Tech Badges -->
+                                <div class="flex flex-wrap gap-1.5 pt-2">
+                                    <span
+                                        class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface-variant font-code-mono text-[11px]">HTML5</span>
+                                    <span
+                                        class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface-variant font-code-mono text-[11px]">CSS3</span>
+                                </div>
+                            </div>
+                            <!-- Ações -->
+                            <div class="flex items-center justify-between gap-3 pt-6 mt-6 border-t-0">
+                                <a class="text-primary hover:text-primary-fixed-dim font-label-md text-label-md flex items-center gap-1"
+                                    href="https://sennaxz7.github.io/grao-e-aroma-landing-page/"
+                                    rel="noopener noreferrer" target="_blank">
+                                    Ver Projeto
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                                            stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                                    </svg>
+                                </a>
+                                <a class="px-3 py-1.5 rounded bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm flex items-center gap-1.5"
+                                    href="https://github.com/Sennaxz7/grao-e-aroma-landing-page"
+                                    rel="noopener noreferrer" target="_blank">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z">
+                                        </path>
+                                    </svg>
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 5. EXPERIÊNCIA E TRAJETÓRIA -->
+            <section class="w-full max-w-[1280px] mx-auto px-6 lg:px-12 py-20 flex flex-col gap-12" id="experiencia">
+                <!-- Header -->
+                <div class="flex flex-col gap-2">
+                    <div class="flex items-center gap-3">
+                        <span
+                            class="px-2.5 py-0.5 rounded bg-surface-container text-primary font-code-mono text-label-sm uppercase">04
+                            // Linha do Tempo</span>
+                        <span class="h-[1px] w-12 bg-primary/40"></span>
+                    </div>
+                    <h2 class="text-on-surface font-bold"
+                        style="font-size: clamp(1.5rem, 2.5vw, 1.75rem); line-height: 1.25;">
+                        Experiência e Trajetória</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+                        Evolução técnica contínua combinando formação acadêmica, vivência técnica prática e construção
+                        de software
+                        de backend orientado a objetos.
+                    </p>
+                </div>
+                <!-- Timeline Vertical Estruturada -->
+                <div class="relative pl-6 sm:pl-10 space-y-10">
+                    <!-- Linha vertical do Timeline -->
+                    <div class="absolute top-2 bottom-2 left-2 sm:left-3 w-0.5 bg-surface-container-high"></div>
+                    <!-- Item 1 -->
+                    <div class="relative flex flex-col gap-2">
+                        <span
+                            class="absolute -left-[23px] sm:-left-[35px] top-1.5 w-4 h-4 rounded-full bg-primary ring-4 ring-surface"></span>
+                        <div class="bg-surface-container p-6 rounded-xl shadow-sm">
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">
+                                    Formação em Engenharia de Software &amp; Formação Técnica
+                                </h3>
+                                <span
+                                    class="px-2.5 py-1 rounded bg-surface-container-lowest font-code-mono text-[12px] text-primary">
+                                    2024 — Presente
+                                </span>
+                            </div>
+                            <p class="font-body-sm text-body-sm text-secondary mt-1">Universidade Católica do Salvador
+                                (UCSAL) &amp;
+                                SENAI</p>
+                            <p class="font-body-md text-body-md text-on-surface-variant mt-3 leading-relaxed">
+                                Desenvolvimento de base sólida em computação, raciocínio lógico, estruturas de dados,
+                                algoritmos,
+                                padrões de projeto e governança de software. Integração diária entre a profundidade
+                                teórica da
+                                engenharia e a aplicabilidade técnica do SENAI.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="relative flex flex-col gap-2">
+                        <span
+                            class="absolute -left-[23px] sm:-left-[35px] top-1.5 w-4 h-4 rounded-full bg-secondary-container ring-4 ring-surface"></span>
+                        <div class="bg-surface-container p-6 rounded-xl shadow-sm">
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">
+                                    Desenvolvimento Prático de APIs REST
+                                </h3>
+                                <span
+                                    class="px-2.5 py-1 rounded bg-surface-container-lowest font-code-mono text-[12px] text-primary">
+                                    Projetos Aplicados
+                                </span>
+                            </div>
+                            <p class="font-body-sm text-body-sm text-secondary mt-1">Ecossistema Spring Boot &amp;
+                                Node.js</p>
+                            <p class="font-body-md text-body-md text-on-surface-variant mt-3 leading-relaxed">
+                                Construção e sustentação de serviços modulares com autenticação JWT, mapeamento
+                                objeto-relacional com
+                                Spring Data JPA, tratamento de exceções com ControllerAdvice e documentação clara de
+                                endpoints.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="relative flex flex-col gap-2">
+                        <span
+                            class="absolute -left-[23px] sm:-left-[35px] top-1.5 w-4 h-4 rounded-full bg-secondary ring-4 ring-surface"></span>
+                        <div class="bg-surface-container p-6 rounded-xl shadow-sm">
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">
+                                    Estudo Avançado de Backend &amp; Bancos de Dados
+                                </h3>
+                                <span
+                                    class="px-2.5 py-1 rounded bg-surface-container-lowest font-code-mono text-[12px] text-primary">
+                                    Foco Contínuo
+                                </span>
+                            </div>
+                            <p class="font-body-sm text-body-sm text-secondary mt-1">Modelagem Relacional em PostgreSQL
+                            </p>
+                            <p class="font-body-md text-body-md text-on-surface-variant mt-3 leading-relaxed">
+                                Aprofundamento na normalização de bancos de dados (1FN, 2FN, 3FN), elaboração de
+                                consultas eficientes,
+                                gestão de chaves estrangeiras, índices e transações para garantia de integridade
+                                referencial.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="relative flex flex-col gap-2">
+                        <span
+                            class="absolute -left-[23px] sm:-left-[35px] top-1.5 w-4 h-4 rounded-full bg-amber-400 ring-4 ring-surface"></span>
+                        <div class="bg-surface-container p-6 rounded-xl shadow-sm">
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">
+                                    Desenvolvimento do Projeto de TCC
+                                </h3>
+                                <span
+                                    class="px-2.5 py-1 rounded bg-surface-container-lowest font-code-mono text-[12px] text-amber-400">
+                                    Trabalho de Conclusão de Curso
+                                </span>
+                            </div>
+                            <p class="font-body-sm text-body-sm text-secondary mt-1">Sistema Web de Acompanhamento
+                                Logístico</p>
+                            <p class="font-body-md text-body-md text-on-surface-variant mt-3 leading-relaxed">
+                                Arquitetura de sistema ponta a ponta voltado para simplificar a rastreabilidade e gestão
+                                de despachos em
+                                comércios de pequeno porte, aplicando Scrum e planejamento modular.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 6. FORMAÇÃO ACADÊMICA & CERTIFICAÇÃO -->
+            <section class="w-full bg-surface-container-low py-20" id="formacao">
+                <div class="max-w-[1280px] mx-auto px-6 lg:px-12 flex flex-col gap-12">
+                    <!-- Section Header -->
+                    <div class="flex flex-col gap-2">
+                        <div class="flex items-center gap-3">
+                            <span
+                                class="px-2.5 py-0.5 rounded bg-surface-container text-primary font-code-mono text-label-sm uppercase">05
+                                // Educação</span>
+                            <span class="h-[1px] w-12 bg-primary/40"></span>
+                        </div>
+                        <h2 class="text-on-surface font-bold"
+                            style="font-size: clamp(1.5rem, 2.5vw, 1.75rem); line-height: 1.25;">
+                            Formação Acadêmica &amp; Certificações</h2>
+                        <p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+                            Bases teóricas, competências técnicas formais e capacitação contínua em tecnologias
+                            emergentes.
+                        </p>
+                    </div>
+                    <!-- Grid de Formação -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Formação 1: Engenharia de Software -->
+                        <div class="bg-surface-container p-6 rounded-xl shadow-sm flex flex-col justify-between gap-4">
+                            <div class="space-y-3">
+                                <div class="flex items-center justify-between">
+                                    <span
+                                        class="px-2.5 py-1 rounded bg-surface-container-high font-code-mono text-label-sm text-primary">GRADUAÇÃO</span>
+                                    <span class="font-code-mono text-[12px] text-on-surface-variant">Matutino</span>
+                                </div>
+                                <h3 class="font-headline-md text-headline-md text-on-surface font-bold">
+                                    Engenharia de Software
+                                </h3>
+                                <p class="font-body-md text-body-md text-secondary font-medium">
+                                    Universidade Católica do Salvador (UCSAL)
+                                </p>
+                                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                                    Formação focada em processos de ciclo de vida de software, engenharia de requisitos,
+                                    arquitetura em
+                                    camadas, métricas de qualidade de código e governança de TI.
+                                </p>
+                            </div>
+                            <div
+                                class="pt-4 flex items-center gap-2 text-on-surface-variant font-code-mono text-label-sm">
+                                <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2"></path>
+                                </svg>
+                                Status: 3º semestre em andamento
+                            </div>
+                        </div>
+                        <!-- Formação 2: Técnico em Desenvolvimento de Sistemas -->
+                        <div class="bg-surface-container p-6 rounded-xl shadow-sm flex flex-col justify-between gap-4">
+                            <div class="space-y-3">
+                                <div class="flex items-center justify-between">
+                                    <span
+                                        class="px-2.5 py-1 rounded bg-surface-container-high font-code-mono text-label-sm text-primary">TÉCNICO
+                                        PROFISSIONALIZANTE</span>
+                                    <span class="font-code-mono text-[12px] text-on-surface-variant">Noturno</span>
+                                </div>
+                                <h3 class="font-headline-md text-headline-md text-on-surface font-bold">
+                                    Técnico em Desenvolvimento de Sistemas
+                                </h3>
+                                <p class="font-body-md text-body-md text-secondary font-medium">
+                                    SENAI - Serviço Nacional de Aprendizagem Industrial
+                                </p>
+                                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                                    Foco rigoroso em lógica de programação pura, implementação prática de banco de
+                                    dados, desenvolvimento
+                                    orientado a objetos, deploy e automações para mercado de tecnologia.
+                                </p>
+                            </div>
+                            <div
+                                class="pt-4 flex items-center gap-2 text-on-surface-variant font-code-mono text-label-sm">
+                                <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2"></path>
+                                </svg>
+                                Status: 3º semestre em andamento
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Certificação Google em Destaque -->
+                    <div
+                        class="bg-gradient-to-r from-surface-container via-surface-container-high to-surface-container p-6 sm:p-8 rounded-xl shadow-md flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-surface-container-lowest flex items-center justify-center flex-shrink-0 text-primary">
+                                <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="flex items-center gap-2">
+                                    <span
+                                        class="px-2 py-0.5 rounded bg-primary/20 text-primary font-code-mono text-[11px] font-bold">CERTIFICAÇÃO
+                                        OFICIAL</span>
+                                    <span class="font-code-mono text-[12px] text-on-surface-variant">Google
+                                        Skills</span>
+                                </div>
+                                <h3 class="font-headline-md text-headline-md text-on-surface font-bold mt-1">
+                                    Introduction to Responsible AI
+                                </h3>
+                                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                                    Instituição: Google Cloud Training • Fundamentos éticos, governança e aplicabilidade
+                                    responsável de
+                                    inteligência artificial em sistemas modernos.
+                                </p>
+                            </div>
+                        </div>
+                        <a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary-container hover:bg-secondary-container text-white font-label-md text-label-md transition-colors shadow-sm flex-shrink-0"
+                            href="https://www.skills.google/public_profiles/110722f3-f52c-456a-b49b-7e404d1e4930/badges/25402493?utm_medium=social&amp;utm_source=linkedin&amp;utm_campaign=ql-social-share"
+                            rel="noopener noreferrer" target="_blank">
+                            <span class="">Ver certificado</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <!-- 7. CONTATO -->
+            <section class="w-full max-w-[1280px] mx-auto px-6 lg:px-12 py-20 flex flex-col gap-12" id="contato">
+                <!-- Section Header -->
+                <div class="flex flex-col gap-2">
+                    <div class="flex items-center gap-3">
+                        <span
+                            class="px-2.5 py-0.5 rounded bg-surface-container text-primary font-code-mono text-label-sm uppercase">06
+                            // Conexão</span>
+                        <span class="h-[1px] w-12 bg-primary/40"></span>
+                    </div>
+                    <h2 class="text-on-surface font-bold"
+                        style="font-size: clamp(1.5rem, 2.5vw, 1.75rem); line-height: 1.25;">
+                        Vamos conversar?</h2>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                        Estou aberto a conexões, projetos e oportunidades na área de tecnologia (Estágio, Trainee e
+                        Desenvolvedor
+                        Júnior).
+                    </p>
+                </div>
+                <!-- Grid de Canais e Formulário -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                    <!-- Coluna de Acessos Diretos -->
+                    <div class="lg:col-span-5 flex flex-col gap-4">
+                        <!-- Card de E-mail com Ação de Copiar -->
+                        <div class="bg-surface-container p-5 rounded-xl shadow-sm flex flex-col gap-3">
+                            <div class="flex items-center justify-between">
+                                <span class="font-code-mono text-label-sm text-primary">E-MAIL PRINCIPAL</span>
+                                <span class="text-[12px] text-on-surface-variant font-code-mono">Resposta Rápida</span>
+                            </div>
+                            <div
+                                class="p-3 bg-surface-container-lowest rounded-lg font-code-mono text-[13px] text-on-surface break-all select-all">
+                                mateussantos192007@gmail.com
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <a class="flex-1 py-2 px-3 rounded bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-sm text-label-sm text-center transition-colors"
+                                    href="mailto:mateussantos192007@gmail.com">
+                                    Abrir no cliente
+                                </a>
+                                <button
+                                    class="flex-1 py-2 px-3 rounded bg-primary-container text-white hover:bg-secondary-container font-label-sm text-label-sm flex items-center justify-center gap-1.5 transition-all"
+                                    id="copy-email-btn" type="button">
+                                    <svg class="w-4 h-4" fill="none" id="copy-icon" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"
+                                            stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                                    </svg>
+                                    <span id="copy-text" class="">Copiar E-mail</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- WhatsApp Link Card -->
+                        <a class="bg-surface-container p-5 rounded-xl shadow-sm flex items-center justify-between hover:bg-surface-container-high transition-colors group"
+                            href="https://wa.me/5571982574108" rel="noopener noreferrer" target="_blank">
+                            <div class="flex items-center gap-3.5">
+                                <div
+                                    class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.44 0-2.85-.38-4.08-1.1l-.29-.17-3.12.82.83-3.04-.19-.3a8.163 8.163 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.71 4.31 3.8 2.53 1.09 2.53.73 2.99.69.45-.04 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <span class="font-code-mono text-[11px] text-on-surface-variant block">WHATSAPP
+                                        DIRETO</span>
+                                    <span class="font-headline-sm text-headline-sm text-on-surface font-semibold">(71)
+                                        98257-4108</span>
+                                </div>
+                            </div>
+                            <svg class="w-5 h-5 text-on-surface-variant group-hover:text-primary transition-colors"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2">
+                                </path>
+                            </svg>
+                        </a>
+                        <!-- LinkedIn Card -->
+                        <a class="bg-surface-container p-5 rounded-xl shadow-sm flex items-center justify-between hover:bg-surface-container-high transition-colors group"
+                            href="https://www.linkedin.com/in/mateus-sena-480b0732a/" rel="noopener noreferrer"
+                            target="_blank">
+                            <div class="flex items-center gap-3.5">
+                                <div
+                                    class="w-10 h-10 rounded-lg bg-blue-500/10 text-primary flex items-center justify-center">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76c-.95 0-1.72-.78-1.72-1.73s.77-1.73 1.72-1.73c.95 0 1.73.78 1.73 1.73s-.78 1.73-1.73 1.73m1.39 9.74v-8.37H5.07v8.37h2.78z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <span class="font-code-mono text-[11px] text-on-surface-variant block">REDE
+                                        PROFISSIONAL</span>
+                                    <span
+                                        class="font-headline-sm text-headline-sm text-on-surface font-semibold">LinkedIn
+                                        /
+                                        mateus-sena</span>
+                                </div>
+                            </div>
+                            <svg class="w-5 h-5 text-on-surface-variant group-hover:text-primary transition-colors"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2">
+                                </path>
+                            </svg>
+                        </a>
+                        <!-- GitHub Card -->
+                        <a class="bg-surface-container p-5 rounded-xl shadow-sm flex items-center justify-between hover:bg-surface-container-high transition-colors group"
+                            href="https://github.com/Sennaxz7" rel="noopener noreferrer" target="_blank">
+                            <div class="flex items-center gap-3.5">
+                                <div
+                                    class="w-10 h-10 rounded-lg bg-surface-container-lowest text-on-surface flex items-center justify-center">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <span
+                                        class="font-code-mono text-[11px] text-on-surface-variant block">REPOSITÓRIOS</span>
+                                    <span class="font-headline-sm text-headline-sm text-on-surface font-semibold">GitHub
+                                        @Sennaxz7</span>
+                                </div>
+                            </div>
+                            <svg class="w-5 h-5 text-on-surface-variant group-hover:text-primary transition-colors"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                    <!-- Formulário de Contato Rápido -->
+                    <div class="lg:col-span-7 bg-surface-container p-6 sm:p-8 rounded-xl shadow-sm">
+                        <form class="flex flex-col gap-4" id="contact-form" novalidate="">
+                            <div class="flex items-center justify-between pb-2">
+                                <span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Envie uma
+                                    mensagem
+                                    direta</span>
+                                <span class="font-code-mono text-[11px] text-on-surface-variant">* Campos
+                                    obrigatórios</span>
+                            </div>
+                            <!-- Nome -->
+                            <div class="flex flex-col gap-1.5">
+                                <label class="font-label-sm text-label-sm text-on-surface" for="form-name">Nome Completo
+                                    *</label>
+                                <input
+                                    class="w-full px-4 py-2.5 rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none focus:ring-2 focus:ring-primary/40 font-body-md text-body-md transition-all"
+                                    id="form-name" name="name" placeholder="Ex: Alex Silva" required="" type="text">
+                                <span class="text-error font-body-sm text-[12px] hidden" id="name-error">Por favor,
+                                    informe seu
+                                    nome.</span>
+                            </div>
+                            <!-- Email -->
+                            <div class="flex flex-col gap-1.5">
+                                <label class="font-label-sm text-label-sm text-on-surface" for="form-email">Seu E-mail
+                                    Corporativo ou
+                                    Pessoal *</label>
+                                <input
+                                    class="w-full px-4 py-2.5 rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none focus:ring-2 focus:ring-primary/40 font-body-md text-body-md transition-all"
+                                    id="form-email" name="email" placeholder="Ex: alex@empresa.com" required=""
+                                    type="email">
+                                <span class="text-error font-body-sm text-[12px] hidden" id="email-error">Por favor,
+                                    informe um endereço
+                                    de e-mail válido.</span>
+                            </div>
+                            <!-- Mensagem -->
+                            <div class="flex flex-col gap-1.5">
+                                <label class="font-label-sm text-label-sm text-on-surface" for="form-message">Mensagem
+                                    ou Proposta
+                                    *</label>
+                                <textarea
+                                    class="w-full px-4 py-2.5 rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none focus:ring-2 focus:ring-primary/40 font-body-md text-body-md transition-all"
+                                    id="form-message" name="message"
+                                    placeholder="Olá Mateus, gostaria de conversar sobre uma oportunidade de estágio/trainee backend..."
+                                    required="" rows="4"></textarea>
+                                <span class="text-error font-body-sm text-[12px] hidden" id="message-error">Por favor,
+                                    digite sua
+                                    mensagem.</span>
+                            </div>
+                            <!-- Botão de Envio -->
+                            <button
+                                class="mt-2 w-full py-3 px-6 rounded-lg bg-primary-container hover:bg-secondary-container text-white font-label-md text-label-md transition-all shadow-md flex items-center justify-center gap-2"
+                                id="form-submit-btn" type="submit">
+                                <span class="">Enviar Mensagem</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2"></path>
+                                </svg>
+                            </button>
+                            <!-- Feedback de Sucesso -->
+                            <div class="hidden p-3 rounded-lg bg-emerald-500/10 text-emerald-400 font-body-sm text-body-sm text-center"
+                                id="form-success-banner">
+                                Mensagem processada com sucesso! Em breve entrarei em contato via e-mail.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <!-- MODAL DE DETALHES DE PROJETO (DOM INTERATIVO) -->
+            <div aria-labelledby="modal-title" aria-modal="true"
+                class="fixed inset-0 z-50 hidden bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6"
+                id="project-modal" role="dialog">
+                <div
+                    class="bg-surface-container w-full max-w-2xl rounded-2xl shadow-2xl p-6 sm:p-8 flex flex-col gap-6 relative max-h-[90vh] overflow-y-auto">
+                    <!-- Botão Fechar -->
+                    <button aria-label="Fechar modal"
+                        class="absolute top-5 right-5 p-2 rounded-lg bg-surface-container-lowest hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors"
+                        id="close-modal-btn" type="button">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2"></path>
+                        </svg>
+                    </button>
+                    <!-- Cabeçalho do Modal -->
+                    <div class="space-y-1.5 pr-8">
+                        <span class="font-code-mono text-label-sm text-primary uppercase"
+                            id="modal-category">CATEGORIA</span>
+                        <h3 class="font-headline-lg text-headline-lg text-on-surface font-bold" id="modal-title">Título
+                            do Projeto
+                        </h3>
+                    </div>
+                    <!-- Corpo da Descrição -->
+                    <div class="space-y-4">
+                        <div>
+                            <span
+                                class="block font-label-sm text-label-sm text-on-surface-variant font-code-mono uppercase">Visão
+                                Arquitetural</span>
+                            <p class="font-body-md text-body-md text-on-surface leading-relaxed mt-1" id="modal-desc">
+                                Descrição</p>
+                        </div>
+                        <div>
+                            <span
+                                class="block font-label-sm text-label-sm text-on-surface-variant font-code-mono uppercase">Stack
+                                Técnica Empregada</span>
+                            <div class="flex flex-wrap gap-2 mt-2" id="modal-tech-list">
+                                <!-- Injetado dinamicamente -->
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-lg bg-surface-container-lowest text-body-sm text-on-surface-variant space-y-1"
+                            id="modal-extra-info">
+                            <!-- Detalhes extras do projeto -->
+                        </div>
+                    </div>
+                    <!-- Rodapé de Ações do Modal -->
+                    <div class="flex items-center justify-end gap-3 pt-4 border-t-0">
+                        <a class="px-5 py-2.5 rounded-lg bg-primary-container hover:bg-secondary-container text-white font-label-md text-label-md transition-colors inline-flex items-center gap-2"
+                            href="#" id="modal-repo-link" rel="noopener noreferrer" target="_blank">
+                            <span class="">Abrir Repositório</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- CLIENT-SIDE SCRIPT: Filtros, Modal, Copiar Email, Validação -->
+        <script src="js/script.js">
+        </script>
+    </main>
+    <footer class="w-full bg-surface-container-lowest text-on-surface-variant py-12">
+        <div class="max-w-[1280px] mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex flex-col items-center md:items-start gap-1">
+                <div class="flex items-center gap-2"><span
+                        class="font-headline-sm text-headline-sm text-on-surface">Mateus
+                        Sena</span><span
+                        class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-code-mono text-label-sm text-[11px]">Backend</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant text-center md:text-left">© 2026 Mateus
+                    Sena. Todos
+                    os direitos reservados.</p>
+            </div>
+            <div class="flex items-center gap-6"><a
+                    class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-1"
+                    href="https://github.com" rel="noopener noreferrer" target="_blank"><span
+                        class="material-symbols-outlined text-[18px]">code</span>GitHub</a><a
+                    class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-1"
+                    href="https://linkedin.com" rel="noopener noreferrer" target="_blank"><span
+                        class="material-symbols-outlined text-[18px]">person</span>LinkedIn</a><a
+                    class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-1"
+                    href="mailto:contato@mateussena.dev"><span
+                        class="material-symbols-outlined text-[18px]">mail</span>E-mail</a>
+            </div>
+        </div>
+    </footer>
+    <script>const themeToggle = document.getElementById('theme-toggle'); const iconDark = document.getElementById('theme-icon-dark'); const iconLight = document.getElementById('theme-icon-light'); const htmlEl = document.documentElement; if (themeToggle) { themeToggle.addEventListener('click', () => { const isDark = htmlEl.classList.contains('dark'); if (isDark) { htmlEl.classList.remove('dark'); htmlEl.setAttribute('data-theme', 'light'); iconDark.classList.add('hidden'); iconLight.classList.remove('hidden'); } else { htmlEl.classList.add('dark'); htmlEl.setAttribute('data-theme', 'dark'); iconDark.classList.remove('hidden'); iconLight.classList.add('hidden'); } }); } const mobileToggle = document.getElementById('mobile-menu-toggle'); const mobileDrawer = document.getElementById('mobile-drawer'); const mobileIcon = document.getElementById('mobile-menu-icon'); const mobileLinks = document.querySelectorAll('.mobile-nav-link'); if (mobileToggle && mobileDrawer) { mobileToggle.addEventListener('click', () => { const isExpanded = mobileToggle.getAttribute('aria-expanded') === 'true'; mobileToggle.setAttribute('aria-expanded', (!isExpanded).toString()); mobileDrawer.classList.toggle('hidden'); mobileIcon.textContent = isExpanded ? 'menu' : 'close'; }); mobileLinks.forEach(link => { link.addEventListener('click', () => { mobileDrawer.classList.add('hidden'); mobileToggle.setAttribute('aria-expanded', 'false'); mobileIcon.textContent = 'menu'; }); }); }</script>
+
+</body>
+
+</html>

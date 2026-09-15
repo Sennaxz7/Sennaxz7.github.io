@@ -1,0 +1,38 @@
+@layer base {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    overscroll-behavior: none;
+  }
+
+  main > :first-child {
+    margin-top: 0 !important;
+  }
+
+  main > :last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --bg: #0b1326;
+  --surface: #0b1326;
+  --surface-container: #171f33;
+  --on-surface: #dae2fd;
+}
+
+[data-theme="light"] {
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --surface-container: #f1f5f9;
+  --on-surface: #0f172a;
+}
